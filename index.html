@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="fonts/stylesheet.css"/>
+   
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" rel="stylesheet">
+    
+
+  <link rel="stylesheet" type="text/css" href="fonts/ProximaNova/fonts.min.css" />
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -102,9 +105,9 @@
     			</div>
 			</label>
         </div>
-			
-
-                    <h2>Upload your documents <span>(Doc, Docx, Text, PDF, Markdown)</span></h2>
+        </div>	
+<section class="content">
+                    <h2>Upload your documents <small>(Doc, Docx, Text, PDF, Markdown)</small></h2>
                     <div class="upload_wrapper">
                         <i class="fa fa-cloud-upload" aria-hidden="true"></i>
 
@@ -123,70 +126,84 @@
                                 <td><i class="fas fa-file-alt"></i>business_operations.docx</td>
                                 <td>78 kb</td>
                                 <td>842</td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                                <td class="remo"><i class="fa fa-trash" aria-hidden="true"></i></td>
                             </tr>
                             <tr>
                                 <td><i class="fas fa-file-alt"></i>business_financial.docx</td>
                                 <td>26 kb</td>
                                 <td>2,326</td>
-                                <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                                <td class="remo"><i class="fa fa-trash" aria-hidden="true"></i></td>
                             </tr>
                         </table>
                     </div>
-    
+        </section>
+        <section class="content">
 			<h2>Choose your languages pairings</h2>
-			<form method="get">
-				<p>
-					<label for="language">From</label>
-						<select id="language" name="language">
+			<div class="lang-wrapper">
+				
+					<p>FROM</p>
+                       <div class="lang-wrap">
+						<select id="language" class="language">
+							<option value="English">English</option>
+							<option value="Ukrainian">Russian</option>
+							<option value="German">German</option>
+							<option value="Greek">Greek</option>
+						</select>
+				        </div>
+            </div>
+            <div class="lang-wrapper">
+					<p>TO</p>
+                        <div class="lang-wrap">
+						<select id="language" class="language">
 							<option value="English">English</option>
 							<option value="Russian">Russian</option>
 							<option value="German">German</option>
 							<option value="Greek">Greek</option>
 						</select>
-				</p>
-				<p>
-					<label for="language">To</label>
-						<select id="language" name="language">
+                </div>
+                            <div class="lang-wrap">
+				<select id="language" class="language">
 							<option value="English">English</option>
 							<option value="Russian">Russian</option>
 							<option value="German">German</option>
 							<option value="Greek">Greek</option>
 						</select>
-				</p>
-                <i title="remove file" class="fas fa-trash"></i>
-                        <button class="button button_bordered"> <i class="fa fa-plus"></i> Add</button>
-			</form>
-			
+                </div>
+                <button type="button" class="trash"></button>
+
+          <button type="button" class="box">Add</button>
+
+            </div>
+			</section>
         <div class="content-half-box">
-            <section class="content_wrapper">
+            <section class="content">
                    <h2>Select your desired tone</h2>
                         <div class="tone__wrapper">
                             <label class="select-type">
     			<input type="radio" name="var" type="radio"/>
-    			<div class='select-wrapper'>            
-                    <div class="radio_custom">
+    			<div class='choose-wrapper'>            
+                   
                         <i class="fa fa-comments"></i>
                         <span>Friendly/Casual</span>
-                    </div>
+                    
                 </div>	
 			</label>
 			<label class="select-type">
     			<input type="radio" name="var" type="radio"/>
-    			<div class='select-wrapper'>            
-                    <div class="radio_custom">
+    			<div class='choose-wrapper'>            
+                    
                         <i class="fa fa-suitcase"></i>
                         <span>Corporate/Pro</span>
-                    </div>
+                   
                 </div>	
 			</label>
 			<label class="select-type">
     			<input type="radio" name="var" type="radio"/>
-    			<div class='select-wrapper'>            
-                    <div class="radio_custom">
+    			<div class='choose-wrapper'>            
+                    
                         <i class="fa fa-bullhorn"></i>
                         <span>Media/Formal</span>
-                    </div>
+                    
                 </div>	
 			</label>
                            
@@ -194,7 +211,7 @@
                         </div>
                     </section>
             <section class="content_wrapper">
-			<h2>Tell us how urgent rhis job is</h2>
+			<h2>Tell us how urgent this job is</h2>
 			<div class="range">
                 <input type="range" min="0" max="100" step="50" value="50">
                 <ul>
@@ -203,12 +220,15 @@
                     <li class="red">Yesterday</li>
                 </ul>
                 <legend>
-                    <i class="fa fa-info"></i>
+                <div class="info-wrapper">
+                    
                     <h4>Timeline info</h4>
+                   </div> 
                     <p>
                         With an <span class="orange">Average</span> timeline set up,
                         our expert interpretor take a reasonable of time perfecting your translation
                     </p>
+                        
                 </legend>
                 </div>
                 </section>
@@ -218,67 +238,71 @@
                 <p>
                     Already have an account with us? <a href="#" title="Sign In">Sign In</a>.
                 </p>
-                <div class="flex-bottom">
-                    <p class="data">Full name</p>
-                    <input name="name" id="name" required value="Methieu Mayer" placeholder="">
-                    <label for="name"></label>
-                </div>
-                <div class="flex-bottom">
-                    <div>
-                        <p class="data">Email adress</p>
-                        <input name="email" id="email" required id="email" value="mathieu.mm@me.com" placeholder="">
-                        <label for="email"></label>
-                    </div>
-                    <div>
-                        <p class="data">Choose password</p>
-                        <input minlength="8" type="password" name="password" id="password" required title="">
-                        <label for="password"></label>
-                    </div>
-                </div>
-			
+                <fieldset class="card-info-block">
+          
+          <label for="name" class="pay-label">
+            <strong>Full name:</strong> 
+            <input type="text" id="name" name="user-name" class="pay-input" placeholder="Mathieu Mayer" pattern="^[A-Za-z\s\.-]+$" required="">
+          </label>
+
+          <div class="autorisation">
+            <label for="email" class="pay-label">
+              <strong>Email adress:</strong> 
+              <input type="email" id="email" name="user_email" class="pay-input" placeholder="mathieu.mm@me.com" required="" pattern="^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$">
+            </label>
+            <label for="pwd" class="pay-label">
+              <strong>Choose a password:</strong> 
+              <input type="password" id="pwd" name="user_pwd" class="pay-input" placeholder=" " required="" minlength="5">
+            </label>
+          </div> 
+                   
+          
             <div class="flex-bottom">
-    			<label class="select-type">
+    			<section class="content_wrapper">
+            
+                        <div class="tone_wrapper">
+                            <label class="select-type">
     			<input type="radio" name="var" type="radio"/>
-    			<div class='select-wrapper'>            
-                    <div class="radio_custom">
+    			<div class='choose-wrapper'>            
+                   
                         <img src="images/visa.png">
-                    </div>
+                    
                 </div>	
 			</label>
 			<label class="select-type">
     			<input type="radio" name="var" type="radio"/>
-    			<div class='select-wrapper'>            
-                    <div class="radio_custom">
-                        <img src="images/paypal.png">
-                    </div>
+    			<div class='choose-wrapper'>            
+                    
+                         <img src="images/paypal.png">
+                   
                 </div>	
 			</label>
 			<label class="select-type">
     			<input type="radio" name="var" type="radio"/>
-    			<div class='select-wrapper'>            
-                    <div class="radio_custom">
-                        <img src="images/amazon.png">
-                    </div>
+    			<div class='choose-wrapper'>            
+                    
+                         <img src="images/amazon.png">
+                    
+                </div>	
+			</label>
+                           
+                            
+                        </div>
+                    </section>
                 
             </div>
-                 <div class="card-data">
-                            <div>
-                                <p class="title">Card number</p>
-                                <input type="text" name="card" id="card" title="enter 16 digit card number" value="" maxlength="16" placeholder="">
-                                <label for="card"></label>
-                            </div>
-                            <div>
-                                <p class="title">Expiery date</p>
-                                <input name="expiery" id="expiery" title="enter expiery card date" value="" maxlength="10" placeholder="DD/MM/YYYY">
-                                <label for="expiery"></label>
-                            </div>
-                            <div>
-                                <p class="title">Code</p>
-                                <input type="nubmer" maxlength="3" title="enter CVV card code" name="code" id="code" value="">
-                                <label for="code"></label>
-                            </div>
-                        </div>
-                        
+
+          <div class="card-details">
+                <label for="card-number"><strong>Card number:</strong>
+                    <input type="number" id="card-number" name="cardnumber" required="" min="10000000000" placeholder=" ">
+                </label>
+                <label for="card-date"><strong>Expiry date:</strong>
+                    <input type="text" id="card-date" name="expiration" placeholder="DD/MM/YY" required="" pattern="(0[1-9]|1[0-9]|2[0-9]|3[01])[- /\.](0[1-9]|1[012])[/ -\.][0-9]{2}">
+                </label>
+                <label for="card-code"><strong>Code:</strong>
+                    <input type="number" id="card-code" name="codenumber" required="" min="100" max="999" placeholder=" ">
+                </label>
+          </div>      
                 </div>
             <div class="flex-end">
                 <label for="agree">I agree to the <a href="#">Terms & Conditions</a></label>
@@ -287,7 +311,7 @@
                 <button class="button button_bordered">Print a quote</button>
             </div>
             </div>
-		</div>
+		
 	</div>
 
 </main>
@@ -317,19 +341,13 @@
         <h4><i class="fa fa-share-alt" aria-hidden="true"></i>
             Connect with us
         </h4>
-        <div class="footer_facebook">
-            <img src="">
-            <a href="/">Facebook</a>
-        </div>
-        <div class="footer_twitter">
-            <img src="">
-            <img src="">
-            <a href="/">Twitter</a>
-        </div>
-        <div class="footer_linkedin">
-            <img src="">
-            <a href="/">Linkedin</a>
-        </div>
+       <ul>
+        <li class="fb"><a href="#">Facebook</a></li>
+        <li class="twitter"><a href="#">Twitter</a></li>
+        <li class="linked"><a href="#"></i>Linkedin</a></li>
+      </ul>
+        
+       
     </div>
     <div class="footer_logo">
         <img src="images/logo_footer.png">
@@ -338,3 +356,4 @@
 
 </body>
 </html>
+
