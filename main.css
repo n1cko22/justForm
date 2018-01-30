@@ -393,6 +393,9 @@ table {
     border-spacing: 2px;
     border-color: grey;
 }
+.upload_list .fa{
+    margin-left: 0
+}
 
 .range ul{
     display: -webkit-box;
@@ -469,9 +472,7 @@ fieldset {
     margin-right:1em;
 }
 
-button, input {
-    overflow: visible;
-}
+
 .flex-end{
     display: flex;
     
@@ -533,16 +534,16 @@ strong{
 }
 
 select {
-  font-family: 'Proxima Nova', Georgia, sans-serif;
+  font-family:inherit;
   width: 200px;
   letter-spacing: 1px;
   color: #9098b8;
   font-weight: bold;
   margin-left: 20px;
   -webkit-appearance: none;
-    -moz-appearance: none;
-        appearance: none;
-  background: #f7f7fa url('images/down-arrow.svg') no-repeat 90% center;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f7f7fa;
 }
 
 .lang-wrapper button.box {
@@ -577,7 +578,6 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: #f7f7fa url('images/down-arrow.svg') no-repeat 90% center;
 }
 
 .lang-wrapper button.box {
@@ -591,6 +591,7 @@ select {
 .lang-wrapper button.trash {
   border:none;
   color:#9098b8;
+    background-color: white;
 }
 
 .lang-wrapper button.box::before {
