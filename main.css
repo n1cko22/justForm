@@ -6,7 +6,7 @@ body{
     counter-reset: section
 }
 .main{
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     background: #fff;
     margin-bottom: 6em;
@@ -16,7 +16,7 @@ body{
 }
 
 .header{
-    width: 70%;
+    width: 80%;
     margin: 2em auto;
     
 }
@@ -410,11 +410,11 @@ table {
     letter-spacing: 0.05em;
 }
 li {
-    list-style-type: none; /* Убираем маркеры */
+    list-style-type: none; 
    }
 ul {
-    margin-left: 0; /* Отступ слева в браузере IE и Opera */
-    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    margin-left: 0;
+    padding-left: 0; 
    }
 .orange{
     color: #edbe76;
