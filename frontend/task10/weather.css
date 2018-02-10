@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box
+}
+div{
+    display: flex;
+}
+.week div{
+    display:flex;
+    justify-content: space-between;
+}
+.container{
+    max-width: 600px;
+}
